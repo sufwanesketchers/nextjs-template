@@ -59,18 +59,6 @@ export function getRuleCompleteFieldSpecs(
       ]
     }
     case 'external_rule': {
-      const hasRange = Array.isArray(m.range) && m.range.length > 0
-      const trackProgress = Boolean(m.trackProgress)
-      if (hasRange && !trackProgress) {
-        return [
-          {
-            key: 'rangeValue',
-            required: true,
-            label: 'Value for range',
-            placeholder: 'e.g. amount or score to verify',
-          },
-        ]
-      }
       return []
     }
     case 'drip_x_tweet':

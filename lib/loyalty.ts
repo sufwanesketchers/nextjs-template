@@ -12,7 +12,7 @@ export const ClaimableRuleTypes = [
   'connected_email',
   'connected_telegram',
   'check_in',
-  'external_rule',
+  //'external_rule',
   'drip_x_follow',
   'drip_x_new_tweet',
   'drip_x_text_in_bio',

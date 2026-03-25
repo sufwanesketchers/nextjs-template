@@ -116,7 +116,7 @@ export const LoyaltyRuleAction = ({
   const isClaimable =
     ClaimableRuleTypes.includes(rule.type) && rule.type === 'TokenHold'
       ? rule.rewardType === 'multiplier'
-      : ClaimableRuleTypes.includes(rule.type)
+      : rule.type === 'external_rule' && !!rule.metadata?.trackProgress ? true : ClaimableRuleTypes.includes(rule.type)
 
   const isProcessing =
     processingStatus?.status === 'pending' ||
