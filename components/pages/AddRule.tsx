@@ -4,10 +4,14 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Header } from '@/components/ui/Header'
 import { Button } from '@/components/ui/Button'
+import {
+  BasicDetailsSection,
+  getRuleSpecificFieldsComponent,
+  type RuleFormValues,
+} from '@/components/rule-specific-fields'
 import { createLoyaltyRule } from '@/lib/actions/createLoyaltyRule'
 import { getLoyaltyRuleGroups } from '@/lib/actions/getLoyaltyRuleGroups'
 import { getRuleOptions } from '@/lib/rule-options'
-import { BasicDetailsSection, getRuleSpecificFieldsComponent, RuleFormValues } from '@/components/rule-specific-fields/'
 
 const defaultValues: RuleFormValues = {
   loyaltyRuleGroupId: '',
